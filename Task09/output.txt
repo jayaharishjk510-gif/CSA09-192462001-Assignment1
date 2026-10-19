@@ -1,0 +1,24 @@
+﻿========================================================================
+TASK 9: ABSTRACTION - ABSTRACT CLASSES & INTERFACES
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Multi-Capability Object (ElectricCar) ---
+Vehicle Reg: TN09EV9999
+Parking Fee (120 min): Rs 60.0
+Charging Fee (15 kWh): Rs 180.0
+Default Eco Discount: 5.0%
+Static Interface Tariff: Rs 12.0/kWh
+Telemetry: EV-Bay: Floor 0, Bay 5 [Charging Port ACTIVE]
+
+--- 2. Payable Interface Polymorphism ---
+Student final payable for Rs 60.00 bill: Rs 0.00 (Pass Active)
+Visitor final payable for Rs 60.00 bill: Rs 60.00 (Full Fee)
+
+--- 3. Architectural Inversion Analysis Summary ---
+If Vehicle were an interface:
+  1. Cannot declare instance variables (regNo) -> Every vehicle must duplicate state.
+  2. Cannot have constructors -> Invariant checks cannot be centralized.
+If Chargeable were an abstract class:
+  1. ElectricCar cannot extend both Car AND Chargeable (Java forbids multiple class inheritance)!
+========================================================================

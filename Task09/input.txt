@@ -1,0 +1,7 @@
+# Sample Input for Task 9
+Electric Car: TN09EV9999
+Duration: 120 minutes (2 billable hours @ Rs 30/hr = Rs 60)
+Charging: 15 kWh @ Rs 12/kWh = Rs 180
+Users:
+  1. Student ("Harish", isPassHolder = true) -> Payable: Rs 0.0
+  2. Visitor ("Mr. Sharma", isPassHolder = false) -> Payable: Rs 60.0
