@@ -1,0 +1,7 @@
+# Sample Input Vehicles for Task 1 Problem Analysis
+# Format: RegNo, VehicleType, EntryTimeMinutes, HasMonthlyPass
+TN01AB1111,TwoWheeler,540,true
+TN02CD2222,Car,560,false
+TN03EF3333,ElectricCar,580,false
+TN04GH4444,Car,600,true
+TN05IJ5555,TwoWheeler,620,false

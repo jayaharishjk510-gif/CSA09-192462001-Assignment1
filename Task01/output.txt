@@ -1,0 +1,14 @@
+﻿========================================================================
+TASK 1: OBJECT-ORIENTED MODEL VS PARALLEL ARRAYS COMPARISON
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--> Searching for vehicle: TN03EF3333
+[Parallel Array Result] Found at index 2: Reg=TN03EF3333, Type=ElectricCar, Entry=580, Pass=false
+[Object Model Result] Found: Vehicle[regNo=TN03EF3333, type=ElectricCar, entry=580 min, pass=false]
+
+--- Structural Risk Simulation in Parallel Arrays ---
+Notice: If one array is sorted or updated without updating all companion arrays,
+data becomes corrupt. In Object-Oriented design, state is atomic and encapsulated.
+Vehicle search time complexity: O(n) for unsorted array, O(1) when using Map/HashSet.
+========================================================================
