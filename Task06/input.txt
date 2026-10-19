@@ -1,0 +1,7 @@
+# Sample Input for Task 6
+Vehicle 1: TwoWheeler("TN01A1")
+Vehicle 2: Car("TN02B2")
+Vehicle 3: ElectricCar("TN03C3", 60)
+Test Duration: 120 minutes
+User 1: StudentUser("S101", "Kavya")
+User 2: VisitorUser("V202", "Mr. Rajesh")

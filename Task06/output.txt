@@ -1,0 +1,28 @@
+﻿========================================================================
+TASK 6: INHERITANCE HIERARCHY & CONSTRUCTOR TRACE
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Constructor Execution Order Trace for ElectricCar ---
+Instantiating: new ElectricCar("TN03C3", 60):
+  [1] Vehicle constructor executed for: TN03C3
+  [2] Car constructor executed.
+  [3] ElectricCar constructor executed with battery capacity: 60 kWh.
+Instantiation complete.
+
+--- 2. Fee Calculation via Inheritance Hierarchy ---
+  [1] Vehicle constructor executed for: TN01A1
+  [2] TwoWheeler constructor executed.
+  [1] Vehicle constructor executed for: TN02B2
+  [2] Car constructor executed.
+Vehicle: TN01A1 [TwoWheeler] -> 2hr Fee: Rs 20.00
+Vehicle: TN02B2 [Car] -> 2hr Fee: Rs 60.00
+Vehicle: TN03C3 [ElectricCar] -> 2hr Fee: Rs 60.00
+
+--- 3. Composition Alternative Verification ---
+Composed Vehicle [TN03C3-COMP, ElectricCar] -> 2hr Fee: Rs 60.00
+
+--- 4. User Affiliation Pass Verification ---
+Student Kavya pass status: true (Free Parking)
+Visitor Mr. Rajesh pass status: false (Subject to full tariff)
+========================================================================
