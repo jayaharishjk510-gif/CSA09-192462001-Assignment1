@@ -1,0 +1,16 @@
+# Sample Input Configuration for Task 10
+Package Hierarchy:
+  parking.model (Vehicle, Car, TwoWheeler, ElectricCar, ParkingSlot, ParkingTicket)
+  parking.service (ParkingFacility, FeeCalculator)
+  parking.app (EncapsulationDemo)
+
+Facility Setup:
+  Floor 0: 3 slots, 1 EV charging port
+  Floor 1: 2 slots, 0 EV charging ports
+
+Test Vehicles:
+  1. TwoWheeler("TN01AA1111"), Entry=1000, PassHolder=true
+  2. Car("TN02BB2222"), Entry=1000, PassHolder=false
+  3. ElectricCar("TN03CC3333", 60), Entry=1000, PassHolder=true, Charging=12 kWh
+Checkout Time: 1130 (130 minutes duration = 3 hours ceiling)
+Invalid Inputs Tested: Duration = -15, RegNo = "   "

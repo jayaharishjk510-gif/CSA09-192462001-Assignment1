@@ -1,0 +1,34 @@
+﻿========================================================================
+TASK 10: PACKAGES, ACCESS CONTROL & ENCAPSULATION
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Package Modularity Flow ---
+Issued Tickets via Encapsulated Service:
+  Ticket#5001 [TN01AA1111 at Floor 0, Slot 0, Active=true]
+  Ticket#5002 [TN02BB2222 at Floor 0, Slot 1, Active=true]
+  Ticket#5003 [TN03CC3333 at Floor 1, Slot 0, Active=true]
+
+Generated Invoices:
+  Invoice #5002 [TN02BB2222]: 130 mins | Base: Rs 90.00 | EV Charge: Rs 0.00 | Discount: -Rs 0.00 | Net: Rs 90.00
+  Invoice #5001 [TN01AA1111]: 130 mins | Base: Rs 30.00 | EV Charge: Rs 0.00 | Discount: -Rs 30.00 | Net: Rs 0.00
+  Invoice #5003 [TN03CC3333]: 130 mins | Base: Rs 90.00 | EV Charge: Rs 144.00 | Discount: -Rs 90.00 | Net: Rs 144.00
+
+--- 2. Data Validation Guard Rejections ---
+Attempting to calculate fee with negative duration (-15 mins):
+  [VALIDATION CAUGHT] Parking duration cannot be negative: -15
+Attempting to instantiate vehicle with empty registration plate:
+  [VALIDATION CAUGHT] Registration plate cannot be null or blank.
+
+--- 3. Autoboxing & Wrapper Class Hazards ---
+Integer cached1 = 100, cached2 = 100:
+  cached1 == cached2: true (Cached in -128..127 range)
+Integer uncached1 = 1000, uncached2 = 1000:
+  uncached1 == uncached2: false [DANGER! Distinct Heap Objects!]
+  uncached1.equals(uncached2): true [CORRECT: Value Equality]
+Attempting unboxing of null wrapper Long to primitive long:
+  [UNBOXING NPE CAUGHT] Attempted primitive conversion on null wrapper!
+
+========================================================================
+Encapsulation prevents corrupting states from caller code.
+========================================================================
