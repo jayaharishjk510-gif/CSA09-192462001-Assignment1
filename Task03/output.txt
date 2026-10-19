@@ -1,0 +1,16 @@
+﻿--- Expected Standard Output (ParkingFacility) ---
+[0, 0]
+[0, 1]
+[1, 0]
+null
+true false false
+[0, 1]
+
+--- Alternative Concept Output (OptimizedParkingFacility O(1)) ---
+=== O(1) Stack-Based Optimized Parking Facility Execution ===
+[0, 0]
+[0, 1]
+[1, 0]
+null
+true false false
+[0, 1]

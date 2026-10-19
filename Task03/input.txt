@@ -1,0 +1,18 @@
+# Input Execution Script for Task 3
+# Floor configuration:
+Floor 0: 2 slots
+Floor 1: 1 slot
+
+# Allocation Sequence:
+allocate("TN01AB1111") -> Expected: [0, 0]
+allocate("TN02CD2222") -> Expected: [0, 1]
+allocate("TN03EF3333") -> Expected: [1, 0]
+allocate("TN04GH4444") -> Expected: null (Full)
+
+# Release Sequence:
+release(0, 1) -> Expected: true
+release(0, 1) -> Expected: false (Already freed)
+release(5, 0) -> Expected: false (Invalid floor)
+
+# Re-allocation Sequence:
+allocate("TN04GH4444") -> Expected: [0, 1]
