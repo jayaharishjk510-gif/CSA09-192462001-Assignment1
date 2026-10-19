@@ -1,0 +1,7 @@
+# Sample Input / Execution Parameters for Task 5
+Initial Counter Base: 1000
+Vehicle 1: TN01AA1111 (Issued Ticket 1001)
+Vehicle 2: TN02BB2222 (Issued Ticket 1002)
+North Gate Vehicle: TN03CC3333
+South Gate Vehicle: TN04DD4444
+Test Ticket for Lifecycle: TN05EE5555

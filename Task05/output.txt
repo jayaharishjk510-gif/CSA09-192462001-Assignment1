@@ -1,0 +1,32 @@
+﻿========================================================================
+TASK 5: STATIC MEMBERS, MULTI-GATE ANALYSIS & OBJECT LIFECYCLE
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Static Ticket Sequence & Global Occupancy ---
+[Static Block] CampusTicket class loaded into JVM Metaspace. Initialized counter to 1000
+Ticket 1 ID: 1001 | Ticket 2 ID: 1002
+Campus Active Occupancy: 2 vehicles
+After Ticket 1 checkout:
+Campus Active Occupancy: 1 vehicles
+
+--- 2. Multi-Gate Facility Analysis (North Gate vs South Gate) ---
+Instance Counter without prefix:
+  North Gate Ticket: TKT-1
+  South Gate Ticket: TKT-1
+  COLLISION DETECTED! Both gates issued 'TKT-1' for different cars!
+Instance Counter with Gate Prefix:
+  North Gate: NORTH-2 | South Gate: SOUTH-2 (Conflict Resolved)
+
+--- 3. Java Pass-by-Value Mechanism ---
+Before modifyTicket(): Ticket ID = 1003, Reg = TN05EE5555
+After modifyTicket() [Reassignment]: Reg is STILL = TN05EE5555 (Caller reference unchanged)
+After closeTicketInMethod() [Mutation]: isActive = false (Heap object mutated)
+
+--- 4. Object Life Cycle & Garbage Collection ---
+Step A: Object created on Heap via 'new' -> Strong Reference in stack
+Step B: Vehicle checks out, ticket closed
+Step C: Local reference nullified: `testTicket = null;`
+Step D: Object has 0 references. It is now an unreachable island on Heap.
+Step E: Eligible for Garbage Collection (Young Gen Eden / Survivor / Tenured Old Gen).
+========================================================================
