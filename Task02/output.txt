@@ -1,0 +1,29 @@
+﻿========================================================================
+TASK 2: DATA REPRESENTATION, PRECISION LOSS & ARRAY ARCHITECTURE
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Precision Loss & Integer Division Pitfall Demo ---
+Duration: 65 minutes | Rate: Rs 30.0/hr
+WRONG Fee (Integer Division `minutes / 60`): Rs 30.0 [REVENUE LOSS: Rs 30.0]
+WRONG Fee (Casting `(int)(minutes / 60.0)`):  Rs 30.0 [REVENUE LOSS: Rs 30.0]
+CORRECT Fee (Ceiling `(minutes + 59) / 60`): Rs 60.0 [VALID BILLING]
+CORRECT Fee (Math.ceil):                     Rs 60.0 [VALID BILLING]
+
+--- 2. Array Representations for Variable Floor Slots ---
+Jagged 2D Array Structure:
+  Floor 0 (Capacity 3): [null, TN01AA1111, null]
+  Floor 1 (Capacity 2): [null, null]
+  Floor 2 (Capacity 4): [null, null, null, TN03CC3333]
+
+Flattened 1D Array with Prefix Offsets (Total size 9):
+  [null, TN01AA1111, null, null, null, null, null, null, TN03CC3333]
+
+ArrayList<String[]> Representation:
+  Floor 0: [null, TN01AA1111, null]
+  Floor 1: [null, null]
+  Floor 2: [null, null, null, TN03CC3333]
+
+--- 3. Input Strategy Demonstration ---
+Parsed Scanner Input -> RegNo: TN05ZZ9999, Type: Car, Minutes: 125
+========================================================================

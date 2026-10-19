@@ -1,0 +1,13 @@
+# Sample Input for Task 2
+# Floor Capacity Array Configuration:
+floors=3
+slotsPerFloor=3,2,4
+
+# Test Duration & Rates:
+parkedMinutes=65
+hourlyRate=30.0
+
+# Sample Input Vehicle:
+vehicleReg=TN05ZZ9999
+vehicleType=Car
+durationMinutes=125
