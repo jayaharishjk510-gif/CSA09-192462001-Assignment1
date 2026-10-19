@@ -1,0 +1,7 @@
+# Sample Input for Task 4
+# Ticket Creation Scenarios:
+Ticket 1: ID=1001, Reg=TN01AA1111, Floor=0, Slot=1, Default Visitor
+Ticket 2: ID=1002, Reg=TN02BB2222, Floor=1, Slot=0, UserType=Student
+Ticket 3: Copy of Ticket 1 (Duplicate issuance)
+Ticket 4: Factory-issued Ticket: ID=1003, Reg=TN03CC3333, Floor=2, Slot=4
+Benchmark Count: 100000 object instantiations

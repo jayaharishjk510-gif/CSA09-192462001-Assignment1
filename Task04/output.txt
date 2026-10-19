@@ -1,0 +1,19 @@
+﻿========================================================================
+TASK 4: CLASSES, CONSTRUCTORS & MEMORY ALLOCATION
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+Chained Constructor Ticket: Ticket[ID=1001, Reg=TN01AA1111, Pos=(0,1), Entry=29873663 min, User=Visitor, Active=true]
+Overloaded Constructor Ticket: Ticket[ID=1002, Reg=TN02BB2222, Pos=(1,0), Entry=29873663 min, User=Student, Active=true]
+Duplicate Ticket (Copy Constructor): Ticket[ID=1001, Reg=TN01AA1111, Pos=(0,1), Entry=29873663 min, User=Visitor, Active=true]
+Identity Equality (t1 == tDuplicate): false (Distinct Heap Objects)
+Data Equality (t1.getTicketId() == tDuplicate.getTicketId()): true
+Factory Created Ticket: Ticket[ID=1003, Reg=TN03CC3333, Pos=(2,4), Entry=29873663 min, User=Visitor, Active=true]
+
+JavaBean ticket before setters (Incomplete State): BeanTicket[ID=0, Reg=null, Pos=(0,0)]
+JavaBean ticket after setters: BeanTicket[ID=1004, Reg=TN04DD4444, Pos=(0,2)]
+
+Creation Time for 100000 tickets:
+  Constructor Chaining (Immutable): 18.35 ms
+  JavaBean Setters (Mutable):       10.74 ms
+========================================================================
