@@ -1,0 +1,7 @@
+# Sample Input for Task 7
+Vehicle 1: TwoWheeler("TN01AA1111")
+Vehicle 2: Car("TN02BB2222")
+Vehicle 3: ElectricCar("TN03CC3333", 75)
+Duplicate Vehicle Attempt: Car("TN01AA1111")
+Test Parking Duration: 130 minutes (Ceiling = 3 hours)
+Rate Table: TwoWheeler = 10.0, Car = 30.0, ElectricCar = 30.0
