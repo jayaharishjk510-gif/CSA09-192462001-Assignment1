@@ -1,0 +1,9 @@
+# Sample Execution Inputs for Task 8 FeeDemo
+Vehicle Array:
+  1. TwoWheeler("TN01A1")
+  2. Car("TN02B2")
+  3. ElectricCar("TN03C3")
+
+Duration Tested: 130 minutes (3 billable hours ceiling)
+EV Charging Units: 10 kWh @ Rs 12/kWh = Rs 120
+Equality Test: new Car("TN02B2").equals(new ElectricCar("TN02B2"))
