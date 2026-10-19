@@ -1,0 +1,16 @@
+# Configuration and Inputs for Task 12 Day-4 Design Challenge
+Floor Capacity Configuration (5 Floors, Non-Uniform):
+  Floor 0: 20 slots
+  Floor 1: 30 slots
+  Floor 2: 40 slots
+  Floor 3: 35 slots
+  Floor 4: 25 slots
+  Total: 150 slots
+
+Test Vehicles:
+1. EBike 1: TN12EB001 (Duration: 30 min) -> Expected: Rs 15.0 flat
+2. EBike 2: TN12EB002 (Duration: 300 min) -> Expected: Rs 15.0 flat
+3. DeliveryVan Peak: TN12VAN-PEAK (10:00 to 12:00, 2 hrs @ Rs 60/hr) -> Expected: Rs 120.0
+4. DeliveryVan Off-Peak: TN12VAN-NIGHT (19:00 to 21:00, 2 hrs @ Rs 30/hr) -> Expected: Rs 60.0
+5. Car with Visitor One-Day Pass: TN12VIS-PASS (240 min) -> Expected: Rs 0.0 net (Rs 120 waived)
+6. Car without Pass: TN12VIS-NOPASS (240 min) -> Expected: Rs 120.0 net

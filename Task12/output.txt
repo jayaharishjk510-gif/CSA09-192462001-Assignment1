@@ -1,0 +1,36 @@
+﻿========================================================================
+TASK 12: DAY-4 DESIGN CHALLENGE - ADAPTATION & DEFENCE
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- 1. Extended 5-Floor Variable Layout Initialisation ---
+Facility Floors and Capacities:
+  Floor 0: 20 slots
+  Floor 1: 30 slots
+  Floor 2: 40 slots
+  Floor 3: 35 slots
+  Floor 4: 25 slots
+Total Campus Facility Capacity: 150 slots
+
+--- 2. New Category 1: E-Bike (Flat Fee Rule) ---
+Short Stay (30 mins):  Invoice #7001 | TN12EB001 (EBike, Standard (No Pass)) | 30 mins [08:00 to 08:30] | Base: Rs 15.0 | Waiver: -Rs 0.0 | NET: Rs 15.0
+Long Stay (300 mins): Invoice #7002 | TN12EB002 (EBike, Standard (No Pass)) | 300 mins [08:00 to 13:00] | Base: Rs 15.0 | Waiver: -Rs 0.0 | NET: Rs 15.0
+Verified: Both stays incurred identical flat fee of Rs 15.0.
+
+--- 3. New Category 2: Delivery Van (Peak vs Off-Peak Pricing) ---
+Peak Stay (10:00 - 12:00, 2 hrs @ Rs 60/hr):  Invoice #7003 | TN12VAN-PEAK (DeliveryVan, Standard (No Pass)) | 120 mins [10:00 to 12:00] | Base: Rs 120.0 | Waiver: -Rs 0.0 | NET: Rs 120.0
+Off-Peak Stay (19:00 - 21:00, 2 hrs @ Rs 30/hr): Invoice #7004 | TN12VAN-NIGHT (DeliveryVan, Standard (No Pass)) | 120 mins [19:00 to 21:00] | Base: Rs 60.0 | Waiver: -Rs 0.0 | NET: Rs 60.0
+Verified: Delivery van charged double rate (Rs 120 vs Rs 60) during peak.
+
+--- 4. Visitor One-Day Pass vs Standard Visitor ---
+Visitor With One-Day Pass: Invoice #7005 | TN12VIS-PASS (Car, Visitor One-Day Pass) | 240 mins [10:00 to 14:00] | Base: Rs 120.0 | Waiver: -Rs 120.0 | NET: Rs 0.0
+Visitor Without Pass:      Invoice #7006 | TN12VIS-NOPASS (Car, Standard (No Pass)) | 240 mins [10:00 to 14:00] | Base: Rs 120.0 | Waiver: -Rs 0.0 | NET: Rs 120.0
+Verified: One-day pass successfully waived 100% of the Rs 120 parking tariff.
+
+--- 5. Evidence-Based Design Defence Summary ---
+Existing classes modified: 0 classes (Vehicle, Car, TwoWheeler untouched).
+New classes added: EBike, DeliveryVan, PricingRule, FlatFeePricingRule,
+                  PeakHourPricingRule, Pass, MonthlyPass, OneDayPass.
+Open-Closed Principle: STRICTLY SATISFIED.
+Jagged Array Scalability: Seamlessly scaled to 5 non-uniform floors.
+========================================================================
