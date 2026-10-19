@@ -1,0 +1,61 @@
+﻿========================================================================
+TASK 11: FULL SYSTEM IMPLEMENTATION, TESTING & DEFENCE
+Student: Jaya Harish J | Reg No: 192462001
+========================================================================
+
+--- TEST 1: NORMAL OPERATIONS (Different Vehicles In/Out) ---
+Parked 3 vehicles successfully:
+  Ticket#1001 [TN01N101, VISITOR, Pos=(0,1), Entry=600 min, Active=true]
+  Ticket#1002 [TN02N202, STUDENT, Pos=(1,1), Entry=600 min, Active=true]
+  Ticket#1003 [TN03N303, STAFF, Pos=(0,0), Entry=600 min, Active=true]
+Current Occupancy: 3 / 4 slots
+Vacated TN01N101: Invoice #1001 | TN01N101 (TwoWheeler, VISITOR) | 90 mins (2 hrs @ Rs 10) | Base: Rs 20.0 | EV: Rs 0.0 | Waiver: -Rs 0.0 | NET: Rs 20.0
+Occupancy after checkout: 2 / 4 slots
+
+--- TEST 2: BOUNDARY CASES ---
+Allocated last available slot: Ticket#1006 [TN11B3, VISITOR, Pos=(1,0), Entry=100 min, Active=true]
+Facility Status: 3 / 3 (Free: 0)
+Attempting allocation when full: null (CORRECT: null returned)
+Zero-minute stay invoice: Invoice #9999 | TN11ZERO (Car, VISITOR) | 0 mins (0 hrs @ Rs 0) | Base: Rs 0.0 | EV: Rs 0.0 | Waiver: -Rs 0.0 | NET: Rs 0.0
+Zero stay fee is: Rs 0.0 (CORRECT: No charge for 0 min)
+Slab Boundary Check: 60 mins -> 1 hr = Rs 30.0
+Slab Boundary Check: 61 mins -> 2 hrs = Rs 60.0
+
+--- TEST 3: INVALID CASES ---
+[CAUGHT NULL VEHICLE] Cannot park null vehicle.
+[CAUGHT DUPLICATE ENTRY] Duplicate entry rejected: Vehicle TN09DUP111 is already inside the facility!
+[CAUGHT UNKNOWN VACATE] Vehicle TN99GHOST not found in active parking roster.
+
+--- TEST 4: HAND-CALCULATED SCENARIO RECONCILIATION ---
+Scenario Breakdown:
+  1. TN01AA1001 (TwoWheeler, Visitor, 45 min)         -> 1 hr @ Rs 10 = Rs 10.0
+  2. TN01AA1002 (TwoWheeler, Student, 180 min)        -> 3 hrs waived = Rs 0.0
+  3. TN02BB2001 (Car, Visitor, 60 min)                -> 1 hr @ Rs 30 = Rs 30.0
+  4. TN02BB2002 (Car, Visitor, 61 min)                -> 2 hrs @ Rs 30 = Rs 60.0
+  5. TN03CC3001 (ElectricCar, Staff, 120 min, 15 kWh) -> Base Rs 0 + 15*12 = Rs 180.0
+  6. TN03CC3002 (ElectricCar, Visitor, 130 min, 20kWh)-> 3*30 + 20*12 = Rs 330.0
+HAND-CALCULATED TOTAL REVENUE: Rs 610.0
+
+  Invoice #1008 | TN01AA1001 (TwoWheeler, VISITOR) | 45 mins (1 hrs @ Rs 10) | Base: Rs 10.0 | EV: Rs 0.0 | Waiver: -Rs 0.0 | NET: Rs 10.0
+  Invoice #1009 | TN01AA1002 (TwoWheeler, STUDENT) | 180 mins (3 hrs @ Rs 10) | Base: Rs 30.0 | EV: Rs 0.0 | Waiver: -Rs 30.0 | NET: Rs 0.0
+  Invoice #1010 | TN02BB2001 (Car, VISITOR) | 60 mins (1 hrs @ Rs 30) | Base: Rs 30.0 | EV: Rs 0.0 | Waiver: -Rs 0.0 | NET: Rs 30.0
+  Invoice #1011 | TN02BB2002 (Car, VISITOR) | 61 mins (2 hrs @ Rs 30) | Base: Rs 60.0 | EV: Rs 0.0 | Waiver: -Rs 0.0 | NET: Rs 60.0
+  Invoice #1012 | TN03CC3001 (ElectricCar, STAFF) | 120 mins (2 hrs @ Rs 30) | Base: Rs 60.0 | EV: Rs 180.0 | Waiver: -Rs 60.0 | NET: Rs 180.0
+  Invoice #1013 | TN03CC3002 (ElectricCar, VISITOR) | 130 mins (3 hrs @ Rs 30) | Base: Rs 90.0 | EV: Rs 240.0 | Waiver: -Rs 0.0 | NET: Rs 330.0
+
+--------------------------------------------------------------
+Hand-Calculated Total Expected: Rs 610.00
+Program Computed Actual Total:  Rs 610.00
+Reconciliation Verdict: EXACT MATCH (100% RECONCILED)
+--------------------------------------------------------------
+
+--- TEST 5: ACTIVE TICKET DATA STRUCTURE LOOKUP BENCHMARK ---
+Time to find worst-case ticket across 1000 active records:
+  1. Array Linear Scan (O(n)):       130500 ns
+  2. ArrayList Linear Scan (O(n)):   226200 ns
+  3. HashMap Keyed by RegNo (O(1)):  13200 ns
+HashMap speedup over Array scan: 9.9x faster
+
+========================================================================
+ALL TASK 11 TESTS EXECUTED AND VALIDATED SUCCESSFULLY.
+========================================================================

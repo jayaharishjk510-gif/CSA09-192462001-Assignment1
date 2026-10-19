@@ -1,0 +1,26 @@
+# Test Suite Configuration for Task 11
+Test Cases:
+1. Normal Operations:
+   - TwoWheeler: TN01N101, Visitor, 90 mins -> Rs 20.0
+   - Car: TN02N202, Student, 90 mins -> Rs 0.0
+   - ElectricCar: TN03N303, Staff, 90 mins -> Rs 0.0
+
+2. Boundary Cases:
+   - Fill to last slot: 3 / 3 capacity
+   - Full overflow: null returned
+   - Zero-minute stay: 0 mins -> Rs 0.0
+   - Slab boundary: 60 mins -> Rs 30.0 vs 61 mins -> Rs 60.0
+
+3. Invalid Cases:
+   - Null vehicle assignment
+   - Duplicate registration entry attempt: TN09DUP111
+   - Vacating non-existent registration: TN99GHOST
+
+4. Hand-Calculated Scenario Table (Target: Rs 610.0):
+   1. TN01AA1001, TwoWheeler, Visitor, 45 min, 0 kWh   -> Rs 10.0
+   2. TN01AA1002, TwoWheeler, Student, 180 min, 0 kWh  -> Rs 0.0
+   3. TN02BB2001, Car, Visitor, 60 min, 0 kWh          -> Rs 30.0
+   4. TN02BB2002, Car, Visitor, 61 min, 0 kWh          -> Rs 60.0
+   5. TN03CC3001, ElectricCar, Staff, 120 min, 15 kWh   -> Rs 180.0
+   6. TN03CC3002, ElectricCar, Visitor, 130 min, 20 kWh -> Rs 330.0
+Total Expected: Rs 610.00
