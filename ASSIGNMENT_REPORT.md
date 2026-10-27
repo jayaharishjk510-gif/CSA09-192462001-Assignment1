@@ -12,7 +12,7 @@
 - **Degree & Branch:** B.E. / B.Tech Computer Science and Engineering
 - **Institution:** SIMATS Engineering
 - **Java Development Kit:** Microsoft Build of OpenJDK 21.0.12.1 LTS (64-Bit Server VM Hotspot)
-- **GitHub Repository Submission:** [https://github.com/jayaharish/CSA09-192462001-Assignment1](https://github.com/jayaharish/CSA09-192462001-Assignment1)
+- **GitHub Repository Submission:** [https://github.com/jayaharishjk510-gif/CSA09-192462001-Assignment1](https://github.com/jayaharishjk510-gif/CSA09-192462001-Assignment1)
 - **Total Marks:** 50 Marks
 
 ---

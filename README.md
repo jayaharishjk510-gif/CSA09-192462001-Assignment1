@@ -14,7 +14,7 @@
 - **Java Version:** OpenJDK 21.0.12.1 LTS (Microsoft Build with HotSpot)
 - **Operating System:** Windows 11 x64
 - **Repository Name:** `CSA09-192462001-Assignment1`
-- **GitHub Repository Link:** `https://github.com/jayaharish/CSA09-192462001-Assignment1`
+- **GitHub Repository Link:** `https://github.com/jayaharishjk510-gif/CSA09-192462001-Assignment1`
 
 ---
 
